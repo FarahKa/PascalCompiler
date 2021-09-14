@@ -1,0 +1,8 @@
+> generate lex.yy.c file
+lex TP2COMPILATION.lex
+> generate TP2COMPILATION.tab.c and TP2COMPILATION.tab.h files
+bison -d TP2COMPILATION.y
+> generate syntaxique.exe program
+gcc -o syntaxique TP2COMPILATION.tab.c lex.yy.c
+> run compiler on something:
+syntaxique.exe < ./"Testing Files"/source4original.txt
